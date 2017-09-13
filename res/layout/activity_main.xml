@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:onClick="indexPage"
+            android:background="@drawable/bt_back" />
+
+        <Button
+            android:id="@+id/btn_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:onClick="keepPhoto"
+            android:background="@drawable/btn_memory" />
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bt_share" />
+    </RelativeLayout>
+    <!-- 主要绘图的区域 -->
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    </RelativeLayout>
+    <!-- 横向的人物选项的导航 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <!-- 水平滚来滚去的滚动条 -->
+
+        <HorizontalScrollView
+            android:id="@+id/hsv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+
+            <RadioGroup
+                android:id="@+id/rg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb0"
+                    style="@style/style_r"
+                    android:text="发型" />
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    style="@style/style_r"
+                    android:text="脸型" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    style="@style/style_r"
+                    android:text="眉毛" />
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    style="@style/style_r"
+                    android:text="眼睛" />
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    style="@style/style_r"
+                    android:text="嘴巴" />
+
+                <RadioButton
+                    android:id="@+id/rb5"
+                    style="@style/style_r"
+                    android:text="特征" />
+
+                <RadioButton
+                    android:id="@+id/rb6"
+                    style="@style/style_r"
+                    android:text="眼镜" />
+
+                <RadioButton
+                    android:id="@+id/rb7"
+                    style="@style/style_r"
+                    android:text="衣服" />
+
+                <RadioButton
+                    android:id="@+id/rb8"
+                    style="@style/style_r"
+                    android:text="帽子" />
+
+                <RadioButton
+                    android:id="@+id/rb9"
+                    style="@style/style_r"
+                    android:text="爱好" />
+
+                <RadioButton
+                    android:id="@+id/rb10"
+                    style="@style/style_r"
+                    android:text="背景" />
+
+                <RadioButton
+                    android:id="@+id/rb11"
+                    style="@style/style_r"
+                    android:text="气泡" />
+            </RadioGroup>
+        </HorizontalScrollView>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ff00" >
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="80dp"
+                android:layout_height="2dp"
+                android:background="#0000ff" />
+        </FrameLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</LinearLayout>
